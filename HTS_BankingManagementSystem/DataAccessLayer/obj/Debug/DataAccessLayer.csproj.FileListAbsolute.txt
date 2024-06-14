@@ -1,0 +1,24 @@
+C:\Users\HP\source\repos\WebApplication12\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\WebApplication12\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\WebApplication12\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\WebApplication12\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\WebApplication12\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\WebApplication12\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\HTS S-Copy\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\HTS S-Copy\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\HTS S-Copy\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\HTS S-Copy\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\HTS S-Copy\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\HTS S-Copy\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\HTS_Final\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\HTS_Final\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\HTS_Final\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\HTS_Final\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\HTS_Final\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\HTS_Final\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache

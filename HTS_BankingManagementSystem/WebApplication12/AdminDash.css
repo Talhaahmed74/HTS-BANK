@@ -1,0 +1,120 @@
+﻿/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fcebeb;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #0E1C21;
+    border-bottom: 1px solid #00D8BA;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0;
+    color: white;
+}
+
+.user-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+    .user-info:hover .dropdown-content {
+        display: block;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 50px);
+}
+
+.sidebar {
+    width: 25%; /* Set the width to 25% of the viewport width */
+    max-width: 300px; /* Set a maximum width to ensure it doesn't become too wide */
+    background-color: #222b33;
+    padding: 10px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.content-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.signout-button {
+    background-color: red;
+    color: white;
+    width: 100%; /* Ensure the button takes full width of its container */
+    height: 50px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    border-radius: 5px;
+    white-space: normal;
+    overflow: hidden;
+}
+
+    .signout-button:hover {
+        background-color: darkred;
+        transform: scale(1.05);
+    }
+
+    .signout-button:active {
+        background-color: #d1d1d1;
+    }
+
+.sidebar-button {
+    width: 100%; /* This width will determine the sidebar width */
+    height: 50px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    background-color: #0a6289;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    white-space: normal;
+    overflow: hidden;
+}
+
+    .sidebar-button:hover {
+        background-color: #3AAFA9;
+        transform: scale(1.05);
+    }
+
+    .sidebar-button.selected {
+        background-color: #2B7A78;
+        color: white;
+    }
+
+    .sidebar-button:active {
+        background-color: #d1d1d1;
+    }

@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminDashboard.Master.cs" Inherits="WebApplication12.AdminDashboardMaster" %>
+<%@ Register Src="~/UI/AdminSideBar.ascx" TagPrefix="uc1" TagName="AdminSideBar" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Dashboard</title>
+    <link href="~/AdminDash.css" rel="stylesheet" />
+    <script src="~/AdminDash.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admin Dashboard</h1>
+            <div class="user-info">
+                <div class="dropdown-content">
+                    <!-- Dropdown content here -->
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <uc1:AdminSideBar runat="server" id="AdminSideBar" />
+            <div class="content-area">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

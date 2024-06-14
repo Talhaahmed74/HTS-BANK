@@ -1,0 +1,36 @@
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.pdb
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.pdb
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\HTS S-Copy\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.pdb
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\HTS_Final\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.dll
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.pdb
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\DataAccessLayer.dll
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
+D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb

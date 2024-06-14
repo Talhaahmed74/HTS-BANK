@@ -1,0 +1,9 @@
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.pdb
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.csproj.CopyComplete
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
+C:\Users\HP\source\repos\WebApplication12\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb
