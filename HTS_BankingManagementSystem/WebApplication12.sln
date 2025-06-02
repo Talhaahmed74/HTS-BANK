@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "Buisn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{361E5326-72EC-4D5B-82B3-A9D3CC127674}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCases", "TestCases", "{4B4B8227-2D07-49C7-AFE4-99B9C02B1F74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Test cases", "SignUpPageTestcases\Project Test cases.csproj", "{BE42C202-67EA-4809-8B55-DCDCB88950C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{361E5326-72EC-4D5B-82B3-A9D3CC127674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{361E5326-72EC-4D5B-82B3-A9D3CC127674}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{361E5326-72EC-4D5B-82B3-A9D3CC127674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE42C202-67EA-4809-8B55-DCDCB88950C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE42C202-67EA-4809-8B55-DCDCB88950C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE42C202-67EA-4809-8B55-DCDCB88950C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE42C202-67EA-4809-8B55-DCDCB88950C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE42C202-67EA-4809-8B55-DCDCB88950C4} = {4B4B8227-2D07-49C7-AFE4-99B9C02B1F74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {17429F13-C078-42A4-A6AE-96CC226A4F5B}

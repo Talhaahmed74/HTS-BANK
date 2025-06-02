@@ -6,7 +6,8 @@ namespace DataAccessLayer
 {
     public class AdminStatsTransactionData
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Use the centralized connection string from Configuration class
+        private static readonly SqlConnection conn = new SqlConnection(Configuration.ConnectionString);
 
         public static (List<DepositHistory> deposits, int count) ViewDeposits(int adminId, string dateInterval)
         {
@@ -29,9 +30,11 @@ namespace DataAccessLayer
                     throw new ArgumentException("Invalid date interval");
             }
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            // Use the already instantiated SqlConnection (conn)
+            using (SqlCommand command = new SqlCommand())
             {
-                string query = @"
+                command.Connection = conn;
+                command.CommandText = @"
                     SELECT 
                         d.Deposited_By,
                         d.Receiver,
@@ -39,7 +42,7 @@ namespace DataAccessLayer
                         d.Deposit_Amount,
                         d.Deposit_Date,
                         d.Deposit_Status,
-                        ac.Account_First_Name + ' ' + ac.Account_Last_Name AS Account_Name,
+                        ac.Account_First_Name + ' ' + ac.Account_Last_Name AS Account_Name
                     FROM 
                         Deposit d
                     LEFT JOIN 
@@ -48,12 +51,11 @@ namespace DataAccessLayer
                         " + dateCondition + @"
                         AND (d.Deposited_By = @AdminId OR d.Receiver = @AdminId)";
 
-                SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@AdminId", adminId);
 
                 try
                 {
-                    connection.Open();
+                    conn.Open();
                     SqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
@@ -82,7 +84,7 @@ namespace DataAccessLayer
                             " + dateCondition + @"
                             AND (d.Deposited_By = @AdminId OR d.Receiver = @AdminId)";
 
-                    SqlCommand countCommand = new SqlCommand(countQuery, connection);
+                    SqlCommand countCommand = new SqlCommand(countQuery, conn);
                     countCommand.Parameters.AddWithValue("@AdminId", adminId);
                     totalRecords = (int)countCommand.ExecuteScalar();
                 }
@@ -92,7 +94,7 @@ namespace DataAccessLayer
                 }
                 finally
                 {
-                    connection.Close();
+                    conn.Close();
                     Console.WriteLine("Connection closed.");
                 }
 
@@ -109,7 +111,6 @@ namespace DataAccessLayer
             public DateTime DepositDate { get; set; }
             public string DepositStatus { get; set; }
             public string AccountName { get; set; }
-           
         }
     }
 }

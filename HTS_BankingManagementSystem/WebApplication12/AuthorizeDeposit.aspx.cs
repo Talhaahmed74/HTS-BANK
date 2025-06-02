@@ -14,23 +14,25 @@ namespace WebApplication12
         {
             int accountNumberValue;
             decimal amountValue;
-
-            // Access the Text property from the TextBox controls
             string accountNumberText = accountNumber.Text;
             string amountText = amount.Text;
 
             if (int.TryParse(accountNumberText, out accountNumberValue) && decimal.TryParse(amountText, out amountValue))
             {
+                if (amountValue < 0)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Amount cannot be less than zero.');", true);
+                    return; 
+                }
+
                 AuthorizeDepositBL authorizeDepositBL = new AuthorizeDepositBL();
                 bool success = authorizeDepositBL.DepositAmount(accountNumberValue, amountValue);
 
                 if (success)
                 {
-                    // After processing, clear the text fields
                     accountNumber.Text = "";
                     amount.Text = "";
 
-                    // Display a message indicating that the deposit is done
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Deposit done!');", true);
                 }
                 else

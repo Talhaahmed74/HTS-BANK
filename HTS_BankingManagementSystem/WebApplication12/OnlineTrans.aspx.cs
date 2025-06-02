@@ -12,7 +12,6 @@ namespace WebApplication12
 
         protected void ProceedButton_Click(object sender, EventArgs e)
         {
-            // Retrieve account number from session
             if (Session["AccountNo"] == null)
             {
                 Response.Redirect("~/CustomerLoginPage.aspx");
@@ -23,7 +22,6 @@ namespace WebApplication12
             int receiverAccountNumber;
             decimal amount;
 
-            // Validate receiver account number and amount input
             if (int.TryParse(txtAccountNumber.Text, out receiverAccountNumber) && decimal.TryParse(txtAmount.Text, out amount))
             {
                 // Create an instance of TransactionBLL from the business logic layer
@@ -33,11 +31,11 @@ namespace WebApplication12
                 string message = bll.PerformTransaction(receiverAccountNumber, amount, currentAccountNumber);
 
                 // Display the result message
-                Response.Write($"<script>alert('{message}');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('{message}');", true);
             }
             else
             {
-                Response.Write("<script>alert('Invalid input. Please enter valid account number and amount.');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Invalid input. Please enter valid account number and amount.');", true);
             }
         }
 

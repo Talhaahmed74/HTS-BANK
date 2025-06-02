@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Data.SqlClient; 
 
 namespace DataAccessLayer
 {
     public class SearchAccountInfoDAL
     {
-        private readonly string _connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Using the centralized connection string from Configuration
+        private static readonly string connectionString = Configuration.ConnectionString;
 
         public AccountInfo GetAccountInfo(int accountNo, int adminId)
         {
             AccountInfo accountInfo = null;
 
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"   SELECT
 	                                bran.Branch_Address,
@@ -62,7 +61,6 @@ namespace DataAccessLayer
                                 Branch = reader.GetString(reader.GetOrdinal("Branch_Address")),
                                 CNIC = reader.GetString(reader.GetOrdinal("Account_CNIC")),
                                 AccountType = reader.GetString(reader.GetOrdinal("Account_Type"))
-                                // Add more properties as needed
                             };
                         }
                         reader.Close();
@@ -76,12 +74,10 @@ namespace DataAccessLayer
             }
             return accountInfo;
         }
-
-        
     }
+
     public class AccountInfo
     {
-       
         public int AccountNo { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -22,3 +22,9 @@ D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataA
 D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -6,7 +6,8 @@ namespace DataAccessLayer
 {
     public class ModifyAccountInfoData
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True;";
+        // Using centralized connection string from Configuration
+        private static readonly string connectionString = Configuration.ConnectionString;
 
         public int UpdateAddress(int accountNo, string address)
         {

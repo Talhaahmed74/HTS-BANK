@@ -5,7 +5,8 @@ namespace DataAccessLayer
 {
     public class DepositData
     {
-        private readonly string connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Using centralized connection string from Configuration
+        private readonly string connectionString = Configuration.ConnectionString;
 
         public decimal GetAccountBalance(int accountNumber)
         {
@@ -50,7 +51,7 @@ namespace DataAccessLayer
                     commandReceiver.Parameters.AddWithValue("@AccountNo", currentAccountNumber);
                     commandReceiver.ExecuteNonQuery();
 
-                    //Store Deposit Record
+                    // Store Deposit Record
                     string depositRecord = @"INSERT INTO Deposit (Deposited_By, Receiver, Deposit_Amount, Deposit_Date)
                                             VALUES(@CurrentAccount, @DepositedTo, @DepositAmount, GETDATE())";
                     SqlCommand commandDeposit = new SqlCommand(depositRecord, connection, transaction);

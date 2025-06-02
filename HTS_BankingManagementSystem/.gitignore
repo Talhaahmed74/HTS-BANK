@@ -1,0 +1,53 @@
+## Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]istro/
+[Dd]eploy/
+[Dd]eployments/
+[Dd]ebug/  # for ASP.NET Core projects
+[Dd]ebugPublic/  # for ASP.NET Core projects
+bin/
+obj/
+
+## User-specific files
+.idea/
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.dbmdl
+*.bak
+
+## Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+## Windows Installer files (for ASP.NET Core)
+*.publish/
+
+## ASP.NET temporary files
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+
+## Logs
+logs/
+*.log
+
+## Node.js dependencies (for front-end code)
+node_modules/
+
+## ASP.NET Core secrets file
+secrets/
+
+## Package directories
+packages/
+
+
+# Ignore Visual Studio temporary files
+*.cache
+*.AssemblyReference.cache

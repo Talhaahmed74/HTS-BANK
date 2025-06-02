@@ -6,8 +6,8 @@ namespace DataAccessLayer
 {
     public class AdminStatsBillPaymentData
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
-
+        // Use the Configuration class to fetch the connection string
+        private static readonly SqlConnection conn = new SqlConnection(Configuration.ConnectionString);
 
         public static (List<BillPayment> transaction, int count) ViewTransactions(int adminId, string dateInterval)
         {
@@ -30,14 +30,15 @@ namespace DataAccessLayer
                     throw new ArgumentException("Invalid date interval");
             }
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            // Use the already instantiated SqlConnection (conn)
+            using (SqlCommand command = new SqlCommand())
             {
-
-                string query = @"SELECT 
-                                        Bill_Amount, 
-                                        ac.Account_No,
-                                        Payment_Date,
-                                        Bill_Type
+                command.Connection = conn;
+                command.CommandText = @"SELECT 
+                                            Bill_Amount, 
+                                            ac.Account_No,
+                                            Payment_Date,
+                                            Bill_Type
                                         from BillPayment bp
                                         LEFT JOIN Accounts ac 
                                         ON ac.Account_No = bp.Account_No
@@ -45,12 +46,11 @@ namespace DataAccessLayer
                                         AND Admin_Id = @AdminId
                                         AND " + dateCondition;
 
-                SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@AdminId", adminId);
 
                 try
                 {
-                    connection.Open();
+                    conn.Open();
 
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -66,13 +66,16 @@ namespace DataAccessLayer
                         transactions.Add(transaction);
                     }
                     reader.Close();
+
+                    // Get the total records count
                     string countQuery = @"SELECT COUNT(*)
                                         from BillPayment bp
                                         LEFT JOIN Accounts ac 
                                         ON ac.Account_No = bp.Account_No
                                         WHERE bp.IsPaid = 1 
                                         AND Admin_Id = @AdminId";
-                    SqlCommand countCommand = new SqlCommand(countQuery, connection);
+
+                    SqlCommand countCommand = new SqlCommand(countQuery, conn);
                     countCommand.Parameters.AddWithValue("@AdminId", adminId);
                     totalRecords = (int)countCommand.ExecuteScalar();
                 }
@@ -82,7 +85,7 @@ namespace DataAccessLayer
                 }
                 finally
                 {
-                    connection.Close();
+                    conn.Close();
                     Console.WriteLine("Connection closed.");
                 }
 

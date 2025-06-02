@@ -4,9 +4,10 @@ using System.Data;
 
 namespace DataAccessLayer
 {
+
     public class AdminLoginData
     {
-        private readonly SqlConnection conn = new SqlConnection("Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True");
+        private readonly SqlConnection conn = new SqlConnection(Configuration.ConnectionString);
 
         public bool VerifyLogin(int accountNo, string password)
         {

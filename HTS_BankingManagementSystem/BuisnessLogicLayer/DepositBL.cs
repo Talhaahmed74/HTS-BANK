@@ -31,9 +31,10 @@ namespace BusinessLogicLayer
                 return "Receiver account not found.";
             }
 
-            if (receiverBalance < amount)
+            if (senderBalance < amount)
             {
-                return "Insufficient balance in receiver's account.";
+                return "Insufficient balance in sender's account.";
+
             }
 
             bool isSuccess = dal.TransferMoney(currentAccountNumber, receiverAccountNumber, amount);

@@ -34,3 +34,12 @@ D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\Bu
 D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
 D:\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.dll
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\BuisnessLogicLayer.pdb
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\DataAccessLayer.dll
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.dll
+D:\FINAL_SDA PROJECT (3)\FINAL_SDA PROJECT\HTS_BankingManagementSystem\BuisnessLogicLayer\obj\Debug\BuisnessLogicLayer.pdb

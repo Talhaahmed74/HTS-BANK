@@ -6,7 +6,8 @@ namespace DataAccessLayer
 {
     public class ModifyInfoData
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Using centralized connection string from Configuration
+        private static readonly string connectionString = Configuration.ConnectionString;
 
         public static List<UpdateRequest> GetRequests(int accountNo)
         {
@@ -69,25 +70,6 @@ namespace DataAccessLayer
             public string AccountType { get; set; }
             public string AccountPhoneNumber { get; set; }
             public string RequestDescription { get; set; }
-            
         }
     }
 }
-
-//SELECT
-//    aiur.AccountNumber,
-//    ac.Account_First_Name + ' ' + ac.Account_Last_Name AS Account_Name,
-//    ac.Account_Address,
-//    ac.Account_Type,
-//    ac.Account_PhoneNumber,
-//    aiur.RequestDescription,
-//    br.Branch_Address -- assuming the address field in Branch table is Branch_Address
-//FROM
-//    AccountInfoUpdateRequests aiur
-//LEFT JOIN
-//    Accounts ac ON ac.Account_No = aiur.AccountNumber
-//LEFT JOIN
-//    Branch br ON br.Branch_Id = ac.Branch_Id
-//WHERE
-//    aiur.AccountNumber = @AccountNumber
-

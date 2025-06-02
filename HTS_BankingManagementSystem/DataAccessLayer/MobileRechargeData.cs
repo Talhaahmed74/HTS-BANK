@@ -5,7 +5,8 @@ namespace DataAccessLayer
 {
     public class MobileRechargeData
     {
-        private readonly string _connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Using centralized connection string from Configuration
+        private readonly string _connectionString = Configuration.ConnectionString;
 
         public int GetReceiverAccount(string phoneNumber)
         {
@@ -30,7 +31,6 @@ namespace DataAccessLayer
                 }
                 catch (Exception ex)
                 {
-                    // Handle the exception (e.g., log it)
                     Console.WriteLine(ex.Message);
                     return 0; // Return 0 or another value to indicate an error
                 }

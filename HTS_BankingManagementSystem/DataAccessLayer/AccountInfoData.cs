@@ -5,8 +5,8 @@ namespace DataAccessLayer
 {
     public class AccountInfoData
     {
-
-        private readonly string _connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Use the Configuration class to fetch the connection string
+        private readonly SqlConnection conn = new SqlConnection(Configuration.ConnectionString);
 
         public Account GetAccountInfo(int accountNo)
         {
@@ -30,34 +30,32 @@ namespace DataAccessLayer
 
             Account account = null;
 
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            // Use the already instantiated SqlConnection (conn)
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AccountNo", accountNo);
+                cmd.Parameters.AddWithValue("@AccountNo", accountNo);
 
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
                     {
-                        if (reader.Read())
+                        account = new Account
                         {
-                            account = new Account
-                            {
-                                AccountNo = reader.GetInt32(reader.GetOrdinal("Account_No")),
-                                Balance = reader.GetDecimal(reader.GetOrdinal("Account_Balance")),
-                                FirstName = reader.GetString(reader.GetOrdinal("Account_First_Name")),
-                                FatherName = reader.GetString(reader.GetOrdinal("Account_Father_Name")),
-                                LastName = reader.GetString(reader.GetOrdinal("Account_Last_Name")),
-                                CNIC = reader.GetString(reader.GetOrdinal("Account_CNIC")),
-                                Gender = reader.GetString(reader.GetOrdinal("Account_Gender")),
-                                AccountType = reader.GetString(reader.GetOrdinal("Account_Type")),
-                                Age = reader.GetInt32(reader.GetOrdinal("Account_Age")),
-                                Email = reader.GetString(reader.GetOrdinal("Account_Email")),
-                                Address = reader.GetString(reader.GetOrdinal("Account_Address")),
-                                BranchAddress = reader.GetString(reader.GetOrdinal("Branch_Address")),
-                                PhoneNumber = reader.GetString(reader.GetOrdinal("Account_PhoneNumber")),
-                            };
-                        }
+                            AccountNo = reader.GetInt32(reader.GetOrdinal("Account_No")),
+                            Balance = reader.GetDecimal(reader.GetOrdinal("Account_Balance")),
+                            FirstName = reader.GetString(reader.GetOrdinal("Account_First_Name")),
+                            FatherName = reader.GetString(reader.GetOrdinal("Account_Father_Name")),
+                            LastName = reader.GetString(reader.GetOrdinal("Account_Last_Name")),
+                            CNIC = reader.GetString(reader.GetOrdinal("Account_CNIC")),
+                            Gender = reader.GetString(reader.GetOrdinal("Account_Gender")),
+                            AccountType = reader.GetString(reader.GetOrdinal("Account_Type")),
+                            Age = reader.GetInt32(reader.GetOrdinal("Account_Age")),
+                            Email = reader.GetString(reader.GetOrdinal("Account_Email")),
+                            Address = reader.GetString(reader.GetOrdinal("Account_Address")),
+                            BranchAddress = reader.GetString(reader.GetOrdinal("Branch_Address")),
+                            PhoneNumber = reader.GetString(reader.GetOrdinal("Account_PhoneNumber")),
+                        };
                     }
                 }
             }
@@ -70,51 +68,45 @@ namespace DataAccessLayer
             string query = @"INSERT INTO AccountInfoUpdateRequests (AccountNumber , RequestDescription) 
                                 VALUES (@Account_ID  , @Description)";
 
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            // Use the already instantiated SqlConnection (conn)
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                cmd.Parameters.AddWithValue("@Account_ID", accountNo);
+                cmd.Parameters.AddWithValue("@Description", description);
+
+                conn.Open();
+                object result = cmd.ExecuteNonQuery();
+                int rowsUpdated = 0;
+
+                if (int.TryParse(Convert.ToString(result), out rowsUpdated))
                 {
-                    cmd.Parameters.AddWithValue("@Account_ID", accountNo);
-                    cmd.Parameters.AddWithValue("@Description", description);
-
-                    conn.Open();
-                    object result = cmd.ExecuteNonQuery();
-                    int rowsUpdated = 0;
-
-                    if (int.TryParse(Convert.ToString(result), out rowsUpdated))
-                    {
-                        return rowsUpdated ;
-                    }
-                    return 0;
+                    return rowsUpdated;
                 }
-
+                return 0;
             }
         }
 
-    public bool UpdatePhoneNumber(string newNumber, string accountNo)
+        public bool UpdatePhoneNumber(string newNumber, string accountNo)
         {
             string query = @"UPDATE Accounts
                                 SET Account_PhoneNumber = @NewNumber
                                 WHERE Account_No = @AccountNo";
 
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            // Use the already instantiated SqlConnection (conn)
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                cmd.Parameters.AddWithValue("@AccountNo", accountNo);
+                cmd.Parameters.AddWithValue("@NewNumber", newNumber);
+
+                conn.Open();
+                object result = cmd.ExecuteNonQuery();
+                int rowsUpdated = 0;
+
+                if (int.TryParse(Convert.ToString(result), out rowsUpdated))
                 {
-                    cmd.Parameters.AddWithValue("@AccountNo", accountNo);
-                    cmd.Parameters.AddWithValue("@NewNumber", newNumber);
-
-                    conn.Open();
-                    object result = cmd.ExecuteNonQuery();
-                    int rowsUpdated = 0 ;
-
-                    if (int.TryParse(Convert.ToString(result), out rowsUpdated))
-                    {
-                        return rowsUpdated > 0;
-                    }
-                    return false;
+                    return rowsUpdated > 0;
                 }
-
+                return false;
             }
         }
 

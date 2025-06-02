@@ -15,13 +15,8 @@
     <form id="form1" runat="server">
         <div class="header">
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User Dashboard</h1>
-            <div class="user-info">
-                <asp:Label ID="lblUserInfo" runat="server" Text="User Info"></asp:Label>
-                <asp:Panel ID="pnlUserInfo" runat="server" CssClass="dropdown-content">
-                    <asp:Label ID="lblName" runat="server" Text="Name: John Doe"></asp:Label><br />
-                    <asp:Label ID="lblAccountNumber" runat="server" Text="Account Number: 1234567890"></asp:Label>
-                </asp:Panel>
-            </div>
+
+   
         </div>
         <div class="main-content">
             <uc1:SideBar runat="server" id="SideBar1" />

@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Configuration;
 
 namespace DataAccessLayer
 {
     public class AuthorizeDepositData
     {
-        private string connectionString;
-
-        public AuthorizeDepositData()
-        {
-            connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
-        }
+        // Using centralized connection string
+        private static readonly string connectionString = Configuration.ConnectionString;
 
         public bool DepositAmount(int accountNumber, decimal amount)
         {
@@ -33,19 +28,23 @@ namespace DataAccessLayer
                             int rowsAffected = command.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
+                                // Commit the transaction if the update is successful
                                 transaction.Commit();
                                 return true;
                             }
                             else
                             {
+                                // Rollback if no rows were affected
                                 transaction.Rollback();
                                 return false;
                             }
                         }
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        // Rollback the transaction in case of an error
                         transaction.Rollback();
+                        Console.WriteLine("Error: " + ex.Message);
                         return false;
                     }
                 }

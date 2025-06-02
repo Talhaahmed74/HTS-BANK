@@ -5,7 +5,8 @@ namespace DataAccessLayer
 {
     public class PasswordChangeDAL
     {
-        private readonly string _connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Using centralized connection string from Configuration
+        private static readonly string connectionString = Configuration.ConnectionString;
 
         public string GetCurrentPassword(int accountNo)
         {
@@ -14,7 +15,7 @@ namespace DataAccessLayer
             // Query to retrieve the current password from the Accounts table
             string query = "SELECT Account_Password FROM Accounts WHERE Account_No = @AccountNo";
 
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -37,7 +38,7 @@ namespace DataAccessLayer
             // Query to update password in the Accounts table
             string query = "UPDATE Accounts SET Account_Password = @NewPassword WHERE Account_No = @AccountNo";
 
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {

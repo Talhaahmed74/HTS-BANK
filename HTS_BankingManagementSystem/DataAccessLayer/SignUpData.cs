@@ -6,7 +6,8 @@ namespace DataAccessLayer
 {
     public class SignUpDAL
     {
-        private readonly string _connectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        // Using centralized connection string from Configuration class
+        private readonly string _connectionString = Configuration.ConnectionString;
 
         public string SetupAccount(string firstName, string lastName, string fatherName, int age, string gender, string phoneNumber, string address, string cnic, string email, string password, string accountType, int branch, int admin)
         {

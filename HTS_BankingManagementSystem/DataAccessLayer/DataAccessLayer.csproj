@@ -48,6 +48,7 @@
     <Compile Include="AdminViewTransactionData.cs" />
     <Compile Include="AuthorizeDepositData.cs" />
     <Compile Include="BillPaymentData.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="CustomerLoginData.cs" />
     <Compile Include="MobileRechargeData.cs" />
     <Compile Include="DepositData.cs" />
