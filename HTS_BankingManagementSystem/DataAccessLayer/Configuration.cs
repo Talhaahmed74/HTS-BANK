@@ -8,6 +8,7 @@ namespace DataAccessLayer
 {
     public static class Configuration
     {
-        public static readonly string ConnectionString = "Data Source=DESKTOP-V9FJ71D\\SQLEXPRESS;Initial Catalog=HTS_BANK_FINAL;Integrated Security=True";
+        public static readonly string ConnectionString = "Data Source=htsbank.database.windows.net;Initial Catalog=HTS_BANK_FINAL;User ID=Talha;Password=Ahmed@0808;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
     }
 }

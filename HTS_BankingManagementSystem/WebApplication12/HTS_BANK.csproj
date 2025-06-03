@@ -162,6 +162,7 @@
     <Content Include="AuthorizeTransaction.aspx" />
     <Content Include="ViewStatistics.aspx" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\HTSBANK20250603124926 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
